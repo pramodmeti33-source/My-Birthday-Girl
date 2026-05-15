@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Wish For Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff4d6d,#ff758f,#ffb3c1);
+    color:white;
+}
+
+/* Slides */
+
+.slide{
+    width:100%;
+    height:100vh;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+.active{
+    display:flex;
+    animation:fade 1s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateX(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* Buttons */
+
+button{
+    margin-top:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4d6d;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* Images */
+
+.photo{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid white;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Headings */
+
+h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:500px;
+    line-height:1.8;
+    font-size:1rem;
+}
+
+/* Countdown */
+
+.countdown{
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+}
+
+.time-box{
+    background:rgba(255,255,255,0.2);
+    padding:20px;
+    border-radius:20px;
+    min-width:80px;
+}
+
+.time-box h3{
+    font-size:2rem;
+}
+
+/* Floating Hearts */
+
+.heart{
+    position:absolute;
+    bottom:-20px;
+    font-size:20px;
+    animation:float 7s linear infinite;
+    opacity:0.8;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* Final Slide */
+
+.final{
+    font-size:1.2rem;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+    .photo{
+        width:180px;
+        height:180px;
+    }
+
+    .countdown{
+        gap:10px;
+    }
+
+    .time-box{
+        min-width:65px;
+        padding:15px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+
+<section class="slide active">
+
+    <!-- CUSTOMIZE HERE -->
+    <img src="https://i.imgur.com/3ZQ3Z6F.png" class="photo">
+
+    <h1>Happy Birthday ❤️</h1>
+
+    <!-- CHANGE NAME -->
+    <h2>My Love Priya 💕</h2>
+
+    <p>
+        Today is all about you and your beautiful smile.
+        Thank you for making my life magical every day.
+    </p>
+
+    <button onclick="nextSlide()">
+        Next ➜
+    </button>
+
+</section>
+
+<!-- SLIDE 2 -->
+
+<section class="slide">
+
+    <h1>🎂 Birthday Countdown</h1>
+
+    <!-- CHANGE AGE -->
+    <h2>Finally 21 Years Old ❤️</h2>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <h3 id="days">00</h3>
+            <span>Days</span>
+        </div>
+
+        <div class="time-box">
+            <h3 id="hours">00</h3>
+            <span>Hours</span>
+        </div>
+
+        <div class="time-box">
+            <h3 id="minutes">00</h3>
+            <span>Minutes</span>
+        </div>
+
+        <div class="time-box">
+            <h3 id="seconds">00</h3>
+            <span>Seconds</span>
+        </div>
+
+    </div>
+
+    <button onclick="nextSlide()">
+        Next ➜
+    </button>
+
+</section>
+
+<!-- SLIDE 3 -->
+
+<section class="slide">
+
+    <!-- CUSTOMIZE IMAGE -->
+    <img src="https://i.imgur.com/V5bQKZL.jpg" class="photo">
+
+    <h1>💌 Special Message</h1>
+
+    <p>
+        You are the best thing that ever happened to me.
+        Every moment with you feels like a dream.
+        Your smile brightens my darkest days and your love
+        makes my life complete.
+    </p>
+
+    <button onclick="nextSlide()">
+        Next ➜
+    </button>
+
+</section>
+
+<!-- SLIDE 4 -->
+
+<section class="slide">
+
+    <h1>🎉 Birthday Wishes 🎉</h1>
+
+    <p class="final">
+        May your life always be filled with happiness,
+        success, peace, and endless love. ❤️
+        <br><br>
+        I wish all your dreams come true.
+        <br><br>
+        Happy Birthday Once Again My Love 💖
+    </p>
+
+    <button onclick="celebrate()">
+        Celebrate 🎊
+    </button>
+
+</section>
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+
+// SLIDES
+
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function nextSlide(){
+
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+
+}
+
+// CONFETTI
+
+function celebrate(){
+
+    confetti({
+        particleCount:300,
+        spread:150,
+        origin:{ y:0.6 }
+    });
+
+}
+
+// HEARTS
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "❤";
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.fontSize = Math.random()*20 + 15 + "px";
+
+    heart.style.animationDuration = Math.random()*3 + 5 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },7000);
+
+}
+
+setInterval(createHeart,300);
+
+// COUNTDOWN
+
+// CHANGE BIRTHDAY DATE HERE
+const birthday = new Date("May 20, 2026 00:00:00").getTime();
+
+setInterval(()=>{
+
+    const now = new Date().getTime();
+
+    const distance = birthday - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
